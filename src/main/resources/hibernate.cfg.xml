@@ -16,5 +16,7 @@
         <mapping class="com.hibernate.Entity.Student" />
         <mapping class="com.hibernate.Entity.Address" />
         <mapping class="com.hibernate.Entity.Embeddable.EmbeddableStudent" />
+        <mapping class="com.hibernate.Entity.Mapping.OneToOnePkg.Question" />
+        <mapping class="com.hibernate.Entity.Mapping.OneToOnePkg.Answer" />
     </session-factory>
 </hibernate-configuration>
