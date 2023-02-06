@@ -50,8 +50,7 @@ public class Answer {
     public String toString() {
         return "Answer{" +
                 "answerId=" + answerId +
-                ", answer='" + answer + '\'' +
-                ", question=" + question +
+                ", answer='" + answer +
                 '}';
     }
 }
