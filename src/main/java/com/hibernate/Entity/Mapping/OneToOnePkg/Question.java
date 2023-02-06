@@ -2,6 +2,7 @@ package com.hibernate.Entity.Mapping.OneToOnePkg;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -11,6 +12,7 @@ public class Question {
     private String question;
 
     @OneToOne
+    @JoinColumn(name = "ansId")
     private Answer answerUni;
 
     public Question() {

@@ -19,9 +19,9 @@ public class OneToOne {
         Answer answer = new Answer();
 
         question.setQuestion("What is a question?");
-        question.setQuestionId(1);
+        question.setQuestionId(2);
         answer.setAnswer("It is a answer");
-        answer.setAnswerId(1001);
+        answer.setAnswerId(1002);
         question.setAnswerUni(answer);
 
         session.save(answer);

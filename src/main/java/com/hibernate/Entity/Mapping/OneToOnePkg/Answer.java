@@ -2,6 +2,7 @@ package com.hibernate.Entity.Mapping.OneToOnePkg;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Answer {
@@ -9,12 +10,16 @@ public class Answer {
     private int answerId;
     private String answer;
 
+    @OneToOne(mappedBy = "answerUni")
+    Question question;
+
     public Answer() {
     }
 
-    public Answer(int answerId, String answer) {
+    public Answer(int answerId, String answer, Question question) {
         this.answerId = answerId;
         this.answer = answer;
+        this.question = question;
     }
 
     public int getAnswerId() {
@@ -33,11 +38,20 @@ public class Answer {
         this.answer = answer;
     }
 
+    public Question getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(Question question) {
+        this.question = question;
+    }
+
     @Override
     public String toString() {
         return "Answer{" +
                 "answerId=" + answerId +
                 ", answer='" + answer + '\'' +
+                ", question=" + question +
                 '}';
     }
 }
